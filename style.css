@@ -1,6 +1,7 @@
 *,html,body{
     padding: 0;
     margin: 0;
+    position: relative;
     box-sizing: border-box;
 }
 body{
@@ -10,6 +11,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 button{
     outline:none;
@@ -22,8 +25,128 @@ button:hover{
 .main{
     margin: 0 10px 0 10px;
     height: 500px;
-    
+    width: 1050px;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    background: transparent;    
 }
-/* .keyTop{
+.controls{
+    height: 150px;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background: #555;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.controls input{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-radius: 50%;
+}
+#addVolume{
+    height:32px;
+    width: 32px;
+    background-image: url('/icons/audio.png');
+    background-position: center;
+}
+#subVolume{
+    height: 32px;
+    width: 32px; 
+    background-image: url('/icons/sound.png');
+    background-position: center;
+}
+#subVolume:active,#addVolume:active{
 
-} */
+    background-clip: border-box;
+    transform: scale(80%);
+    transition: all ease-in 250ms;
+}
+#volText{
+    height: 32px;
+    width: 80px;
+    background-color:rgb(255,255,255,.3);
+    border-radius:12px ;
+    font-size: large;
+    font-weight:500;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+#volRange{
+    width:500px;
+}
+
+.keys{
+    height: 350px;
+    width:100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    display: flex;
+    row-gap: 2px;
+
+}
+.keyBottom{
+    height:inherit;
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+}
+.keyBottom button{
+    height: 100%;
+    width:105px;
+    background:#bbb;
+    border: solid #000;
+    border-width: 1px;
+}
+.keyTop{
+    height:150px ;
+    width:100%;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    justify-content: space-evenly;
+    
+    background-color:transparent;
+}
+.keyTop button{
+    background-color: #000;
+    height: inherit;
+    width: 70px;
+}
+.keys button:active,.keys button:hover,.active{
+    box-shadow: inset 10px 10px 10px 10px #888,
+    inset 10px 10px 10px 10px #888,
+    inset 10px 10px 10px 10px #888,
+    inset 10px 10px 10px 10px #888
+    ;
+    /* background-color:#999; */
+    backdrop-filter: blur(10px);
+    border-top: transparent;
+    border-bottom: transparent;
+    border-right-width: 2px;
+    border-left: transparent;
+    transition: all ease-in-out 200ms;
+}
+.whiteKeys p{
+    color:#000;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    text-align: center;
+    visibility: hidden;
+}
+.blackKeys p{
+    color:#fff;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    text-align: center;
+    visibility: hidden;
+}
