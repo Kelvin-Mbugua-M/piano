@@ -98,6 +98,7 @@ addVolume.addEventListener('click',volumeIncrease)
 //     'C', 'C', 'E', 'D', 'C',
 //     'C', 'C', 'E', 'D', 'C',
 //     'G', 'G', 'C', 'C', 'E', 'D', 'C',
+
 //     'D', 'D', 'E', 'E', 'D', 'C',
 //     'G', 'G', 'C', 'C', 'E', 'D', 'C',
 //     'D', 'D', 'E', 'E', 'D', 'C',
